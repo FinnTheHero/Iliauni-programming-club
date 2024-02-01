@@ -1,6 +1,6 @@
 # Verve 🔥
 
-![Verve](public/verveimage.jpg)
+![Verve](public/favicon-dark-v3.png)
 
 Verve is a minimal blog theme for Astro.
 
@@ -27,7 +27,7 @@ Inside of Verve, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── favicon.png
 ├── src/
 │   ├── components/
 │   ├── content/

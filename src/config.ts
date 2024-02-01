@@ -3,7 +3,7 @@ import type { Socials } from "./types";
 export const SITE_URL = "https://vervetheme.vercel.app";
 export const SITE_TITLE = "IPC";
 export const SITE_DESCRIPTION = "Iliauni Programming Club";
-export const SITE_LOGO = "/logo.svg";
+export const SITE_LOGO = "/favicon-dark-v3.png";
 
 export const SOCIALS: Socials = [
   {
