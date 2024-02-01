@@ -13,7 +13,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Project Structure
 
-- Now using [Verve](https://github.com/aryanjha256/verve) as a template
+- Using [Verve](https://github.com/aryanjha256/verve) as a template
 
 ```text
 /
