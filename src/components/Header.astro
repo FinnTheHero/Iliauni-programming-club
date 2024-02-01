@@ -5,20 +5,28 @@ import { SITE_TITLE, SITE_LOGO } from "../config";
 <header
   class="flex items-center justify-between py-6 max-w-5xl px-3 md:px-6 mx-auto"
 >
-  {
+  <!-- {
     SITE_LOGO ? (
       <img src={SITE_LOGO} alt={SITE_TITLE} class="w-8 h-8" />
     ) : (
-      <span class="text-xl font-bold">{SITE_TITLE}</span>
+      <span class="text-xl font-bold cutom-title">{SITE_TITLE}</span>
     )
-  }
+  } -->
+  <span class="text-xl font-bold cutom-title">
+    <a href="/">
+      [{SITE_TITLE}]
+    </a>
+  </span>
   <nav>
-    <ul class="flex items-center justify-center space-x-4">
+    <ul class="flex items-center justify-center space-x-4 custom-link">
       <li>
-        <a href="/">Home</a>
+        <a href="/">[Home]</a>
       </li>
       <li>
-        <a href="/blog">Posts</a>
+        <a href="/blog">[Posts]</a>
+      </li>
+      <li>
+        <a href="/about">[About]</a>
       </li>
     </ul>
   </nav>
