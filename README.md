@@ -1,28 +1,19 @@
-# Verve 🔥
+# Iliauni Programming Club
 
-![Verve](public/favicon-dark-v3.png)
-
-Verve is a minimal blog theme for Astro.
-
-Verve follows best practices for a blog website.
-
-## 🎉 Features
-
-- Awesome Performance
-- SEO Optimized
-- Sitemap and RSS
-
-## ✅ Lighthouse Score
-
-<p align="center">
-  <a href="https://pagespeed.web.dev/analysis/https-vervetheme-vercel-app/a84yqse61a?form_factor=desktop">
-    <img width="710" alt="Verve Lighthouse Score" src="lighthouse-score.svg">
-  <a>
+<p style="font-size: 20px;">
+Welcome to the Iliauni Programming Club's official website repository!
+This repository contains the code for our club's website, featuring information about events, FAQs, member testimonials, and signup links.
 </p>
 
-## 🚀 Project Structure
+![Iliauni Programming Club](public/favicon-dark-v3.png)
 
-Inside of Verve, you'll see the following folders and files:
+# License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Project Structure
+
+- Now using [Verve](https://github.com/aryanjha256/verve) as a template
 
 ```text
 /
@@ -39,13 +30,15 @@ Inside of Verve, you'll see the following folders and files:
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Everything in `src/pages/` that ends with `.astro` or `.md` is a route based on its filename.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Components go into `src/components/`.
+
+Images go into `public/` directory.
 
 All blog posts are stored in `src/content/blog` directory.
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -58,6 +51,4 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 📜 License
-
-**Verve** is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## For more details see [Astro Docs](https://docs.astro.build)
