@@ -1,5 +1,5 @@
 body {
-  font-family: 'Courier Prime', sans-serif;
+  font-family: "Courier Prime", sans-serif;
   overflow-y: scroll;
   font-weight: 400;
 
@@ -14,13 +14,16 @@ body {
 }
 
 .custom-title {
-  color: #F5F5F2;
+  color: #94e2d5;
+}
+
+.custom-subtitle {
+  color: #7f849c;
 }
 
 .custom-content {
   color: #89dceb;
 }
-
 
 /* Custom scrollbar for webkit browsers */
 /* Vertical scrollbar */

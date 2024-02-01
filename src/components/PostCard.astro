@@ -11,16 +11,16 @@ interface Props {
 const { href, title, desc, pubDate } = Astro.props;
 ---
 
-<li class="py-6">
+<li class="py-6 border-b border-zinc-800">
   <a href={`/blog/${href}`}>
     <div class="space-y-2 flex flex-col">
       <div>
-        <div class="font-light text-sm">
-          <FormattedDate date={pubDate} />
+        <div class="font-light text-sm custom-content">
+          --<FormattedDate date={pubDate} />--
         </div>
-        <h2 transition:name={title}>{title}</h2>
+        <h2 class="custom-title" transition:name={title}>[{title}]</h2>
       </div>
-      <p class="font-light text-slate-300">{desc}</p>
+      <p class="font-light text-slate-300 custom-subtitle">> {desc}</p>
     </div>
   </a>
 </li>

@@ -13,7 +13,9 @@ const latestPost = posts.slice(0, 4);
 ---
 
 <MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="py-6">
+  <div class="py-6"
+	style="height: auto;"
+  >
     <div class="text-4xl max-w-lg font-medium py-16">
       <h1
         class="inline-block bg-clip-text custom-title"
@@ -22,7 +24,7 @@ const latestPost = posts.slice(0, 4);
       </h1>
     </div>
     <h2 class="text-2xl font-bold mb-4">Recent Posts</h2>
-    <ul class="md:w-2/3">
+    <ul class="sm:w-[max-content]">
       {
         latestPost.map((post) => (
           <PostCard
@@ -37,22 +39,22 @@ const latestPost = posts.slice(0, 4);
   </div>
   <a href="/blog">
     <h3 class="text-xl my-8 custom-link">
-      [Check other posts]
-      <svg
-        width="6"
-        height="10"
-        viewBox="0 0 6 10"
-        fill="none"
-        class="inline-block ml-2"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1 9L5 5L1 1"
-          stroke="#fab387"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+		[Other posts]
+		<svg
+			width="6"
+			height="10"
+			viewBox="0 0 6 10"
+			fill="none"
+			class="inline-block ml-2"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+			d="M1 9L5 5L1 1"
+			stroke="#fab387"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"></path>
+		</svg>
     </h3>
   </a>
 </MainLayout>
