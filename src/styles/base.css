@@ -6,7 +6,11 @@ body {
   /*Background color*/
   background-color: #11111b;
   /*Base text color*/
-  color: #cdd6f4;
+  color: #94e2d5;
+}
+
+.custom-main {
+  color: #94e2d5;
 }
 
 .custom-link {
@@ -14,7 +18,7 @@ body {
 }
 
 .custom-title {
-  color: #94e2d5;
+  color: #cdd6f4;
 }
 
 .custom-subtitle {

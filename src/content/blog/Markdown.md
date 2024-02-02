@@ -1,7 +1,7 @@
 ---
-title: "Astro"
+title: "Markdown"
 description: "The web framework for content-driven websites."
-pubDate: "Jul 13 2022"
+pubDate: "Feb 2 2024"
 ---
 
 Astro is an open-source web framework designed for content-heavy websites, such as landing pages, blogs, and more. It offers a unique approach to building websites by combining the best of static site generators and dynamic frameworks. In this article, we will explore the key features and benefits of Astro, as well as how to get started with using it.

@@ -5,11 +5,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import PostCard from "../components/PostCard.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-
-const latestPost = posts.slice(0, 4);
+const postFaq = (await getCollection("blog")).find((post) => post.data.title === "FAQ");
+const postAbout = (await getCollection("blog")).find((post) => post.data.title === "About IPC");
+const postJoin = (await getCollection("blog")).find((post) => post.data.title === "Join us");
 ---
 
 <MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -23,17 +21,33 @@ const latestPost = posts.slice(0, 4);
         {SITE_TITLE} - {SITE_DESCRIPTION}
       </h1>
     </div>
-    <h2 class="text-2xl font-bold mb-4">Recent Posts</h2>
+    <h2 class="text-3xl font-bold mb-4">Important Posts</h2>
     <ul class="sm:w-[max-content]">
-      {
-        latestPost.map((post) => (
-          <PostCard
-            title={post.data.title}
-            desc={post.data.description}
-            pubDate={post.data.pubDate}
-            href={post.slug}
-          />
-        ))
+      {postAbout && 
+        <PostCard 
+          title={postAbout.data.title}
+          desc={postAbout.data.description}
+          pubDate={postAbout.data.updatedDate || postAbout.data.pubDate}
+          href={postAbout.slug}
+        />
+      }
+
+      {postJoin && 
+        <PostCard 
+          title={postJoin.data.title}
+          desc={postJoin.data.description}
+          pubDate={postJoin.data.updatedDate || postJoin.data.pubDate}
+          href={postJoin.slug}
+        />
+      }
+      
+      {postFaq && 
+        <PostCard 
+          title={postFaq.data.title}
+          desc={postFaq.data.description}
+          pubDate={postFaq.data.updatedDate || postFaq.data.pubDate}
+          href={postFaq.slug}
+        />
       }
     </ul>
   </div>
