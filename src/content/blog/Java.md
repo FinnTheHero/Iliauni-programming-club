@@ -1,6 +1,6 @@
 ---
 title: "Java"
-description: "Support for markdown in Verve theme."
+description: "Fibonacci numbers in Java"
 pubDate: "Feb 2 2024"
 updatedDate: "Feb 3 2024"
 ---

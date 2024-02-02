@@ -1,6 +1,6 @@
 ---
 title: "Markdown"
-description: "The web framework for content-driven websites."
+description: "Support for markdown in Astro."
 pubDate: "Feb 2 2024"
 ---
 
