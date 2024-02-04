@@ -5,51 +5,118 @@ import Layout from "../../layouts/MainLayout.astro";
 import PostCard from "../../components/PostCard.astro";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => {
-    const aDate = a.data.updatedDate || a.data.pubDate;
-    const bDate = b.data.updatedDate || b.data.pubDate;
-    return bDate.valueOf() - aDate.valueOf();
-  }
+	(a, b) => {
+		const aDate = a.data.updatedDate || a.data.pubDate;
+		const bDate = b.data.updatedDate || b.data.pubDate;
+		return bDate.valueOf() - aDate.valueOf();
+	}
 );
+
+
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <section class="mt-8">
-    <h1 class="text-4xl font-bold mt-4">Posts</h1>
-    <p class="mb-4">Every post on this website</p>
-    <p class="my-4 custom-subtitle">Sorted by the most recent update or publish date</p>
-    <ul class="sm:w-[max-content]">
-      {
-        posts.map((post) => (
-          <PostCard 
-            title={post.data.title}
-            desc={post.data.description}
-            pubDate={post.data.updatedDate || post.data.pubDate}
-            href={post.slug}
-          />
-        ))
-      }
-    </ul>
-    <a href="/">
-      <h3 class="text-xl my-8 custom-link">
-        <svg
-          width="6"
-          height="10"
-          viewBox="0 0 6 10"
-          fill="none"
-          class="inline-block ml-2"
-          xmlns="http://www.w3.org/2000/svg"
-          transform="rotate(180)"
-        >
-          <path
-          d="M1 9L5 5L1 1"
-          stroke="#fab387"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        </svg>
-        [Go Back]
-      </h3>
-    </a>
-  </section>
+	<section class="mt-8">
+		<h1 class="text-4xl font-bold mt-4">Posts</h1>
+		<p class="mb-4">Every post on this website</p>
+		<p class="my-4 custom-subtitle">Sorted by the most recent update or publish date</p>
+		<input id="search" type="text" placeholder="Search..." class="custom-background border-b sm:w-[36.5%] sm:mt-6 sm:mb-12 my-7">
+		<ul id="content" class="sm:w-[max-content]">
+			{
+				posts.map((post) => (
+					<PostCard 
+						title={post.data.title}
+						desc={post.data.description}
+						pubDate={post.data.updatedDate || post.data.pubDate}
+						href={post.slug}
+					/>
+				))
+			}
+		</ul>
+		<a href="/">
+			<h3 class="text-xl my-8 custom-link">
+				<svg
+					width="6"
+					height="10"
+					viewBox="0 0 6 10"
+					fill="none"
+					class="inline-block ml-2"
+					xmlns="http://www.w3.org/2000/svg"
+					transform="rotate(180)"
+				>
+					<path
+					d="M1 9L5 5L1 1"
+					stroke="#fab387"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"></path>
+				</svg>
+				[Go Back]
+			</h3>
+		</a>
+
+		<script>
+			import { getCollection } from "astro:content";
+			
+			const searchInput  = document.getElementById('search');
+			const ul  		   = document.getElementById('content');
+			
+			// Clear search input on page load
+			window.onload = () => {
+				// @ts-ignore
+				searchInput.value = "";
+			}
+
+			// Fetch posts and sort them by update or publish date descending
+			const posts = (await getCollection("blog")).sort(
+				(a, b) => {
+					const aDate = a.data.updatedDate || a.data.pubDate;
+					const bDate = b.data.updatedDate || b.data.pubDate;
+					return bDate.valueOf() - aDate.valueOf();
+				}
+			);
+
+			searchInput?.addEventListener('input', (event) => {
+				// @ts-ignore
+				const query = searchInput.value.toLowerCase();
+				
+				// @ts-ignore
+				ul.innerHTML = `<h1 class="mb-6">Found in following posts:</h1>`;
+				
+				posts.forEach((post: any) => {
+					if (post.data.title.toLowerCase().includes(query) || post.body.toLowerCase().includes(query) || post.data.description.toLowerCase().includes(query)) {
+						
+						// Format the date
+						const formattedDate = (post.data.updatedDate || post.data.pubDate).toLocaleDateString('en-US', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric'
+						});
+						
+						// @ts-ignore
+						ul.innerHTML += 
+						`<li class="py-6 border-b border-zinc-800">
+							<a href="/blog/${post.slug}}>
+								<div class="space-y-2 flex flex-col">
+									<div>
+										<h3 class="font-light text-sm custom-content">
+											-- ${formattedDate} --
+										</h3>
+										<h2 class="custom-title" transition:name="${post.data.title}">[${post.data.title}]</h2>
+									</div>	
+									<p class="font-light text-slate-300 custom-subtitle">> ${post.data.description}</p>
+								</div>
+							</a>
+						</li>`;
+
+						console.log(post);
+					}
+				});
+
+				if (query === "") {
+					ul?.removeChild(ul.childNodes[0]);
+				}
+			});
+		</script>
+	</section>
 </Layout>

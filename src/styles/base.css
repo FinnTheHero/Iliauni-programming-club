@@ -13,6 +13,10 @@ body {
   color: #94e2d5;
 }
 
+.custom-background {
+  background-color: #11111b;
+}
+
 .custom-link {
   color: #fab387;
 }

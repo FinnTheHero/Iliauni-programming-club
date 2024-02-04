@@ -1,6 +1,6 @@
 ---
 title: "Join us"
-description: "Iliauni Programming Club."
+description: "Everything you need to know before Joining."
 pubDate: "Feb 3 2024"
 ---
 
