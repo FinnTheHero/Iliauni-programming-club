@@ -114,7 +114,8 @@ const posts = (await getCollection("blog")).sort(
 				});
 
 				if (query === "") {
-					ul?.removeChild(ul.childNodes[0]);
+					window.location.reload();
+					// ul?.removeChild(ul.childNodes[0]);
 				}
 			});
 		</script>
