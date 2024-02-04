@@ -20,7 +20,7 @@ const posts = (await getCollection("blog")).sort(
 		<h1 class="text-4xl font-bold mt-4">Posts</h1>
 		<p class="mb-4">Every post on this website</p>
 		<p class="my-4 custom-subtitle">Sorted by the most recent update or publish date</p>
-		<input id="search" type="text" placeholder="Search..." class="custom-background border-b sm:w-[36.5%] sm:mt-6 sm:mb-12 my-7">
+		<input id="search" type="text" placeholder="Search..." class="custom-background border-b sm:w-[36.5%] sm:mt-6 sm:mb-12 my-7" autofocus>
 		<ul id="content" class="sm:w-[max-content]">
 			{
 				posts.map((post) => (
