@@ -1,0 +1,65 @@
+# -------------------
+# Retype Pro
+# -------------------
+
+poweredByRetype: true
+
+outbound:
+  enabled: flase
+
+# Start in "Pro Mode" trial
+start:
+  pro: false
+
+# -------------------
+# Retype
+# -------------------
+
+input: ./
+
+output: .retype
+
+url: https://iliauni-programming-club.vercel.app
+
+branding:
+  title: Iliauni Programming Club
+  label: v.0.1
+
+meta:
+  title: ""
+
+edit:
+  repo: https://github.com/FinnTheHero/Iliauni-programming-club.git
+  label: "Source Code"
+
+editor:
+  enabled: false
+
+search:
+  hotkeys:
+    - "/"
+  mode: full
+  noResultsFoundMsg: "Learn to search!"
+  placeholder: "Search . . ."
+
+links:
+  - text: Discord
+    link: https://discord.gg/NafS7QXpRT
+    icon: home
+
+data:
+  abbreviations:
+    HTML: Hyper Text Markup Language
+    CSS: Cascading Style Sheet
+    MD: Markdown
+
+footer:
+  copyright: © Copyright {{ year }} – Iliauni Programmnig Club – All rights reserved
+  links:
+    - text: About
+      link: about.md
+      icon: question
+
+    - text: License
+      link: license.md
+      icon: shield-check
