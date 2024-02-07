@@ -21,9 +21,12 @@ output: .retype
 
 url: https://iliauni-programming-club.vercel.app
 
+exclude:
+  - README.md
+
 branding:
   title: IPC
-  label: v0.0.2
+  label: v0.0.3
 
 meta:
   title: ""

@@ -8,6 +8,14 @@ Date format: yyyy - mm - dd
 
 ---
 
+## v0.0.3
+
+Released: 2024 - 2 - 7
+
++++ Fixed :icon-bug:
+- [x] README.md colliding with welcome.md
++++
+
 ## v0.0.2
 
 Released: 2024 - 2 - 7
