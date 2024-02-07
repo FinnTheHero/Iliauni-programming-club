@@ -28,3 +28,5 @@ Our club is open to all *Iliauni students* who share a passion for technology, r
 3. **Get Involved**: Dive into our activities, participate in discussions, and contribute to our projects to make the most out of your membership.
 
 Ready to take the next step? Join the Iliauni Programming Club today and embark on an exciting journey of learning and discovery!
+
+---

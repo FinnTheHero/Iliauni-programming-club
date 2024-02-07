@@ -4,7 +4,19 @@ icon: log
 
 # Changelog
 
+Date format: yyyy - mm - dd
+
 ---
+
+## v0.0.2
+
+Released: 2024 - 2 - 7
+
++++ New :icon-shield-check:
+
+- [x] Added Git guide
+- [x] Added guide for website usage
++++
 
 ## v0.0.1
 

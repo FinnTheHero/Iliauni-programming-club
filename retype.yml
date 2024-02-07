@@ -22,8 +22,8 @@ output: .retype
 url: https://iliauni-programming-club.vercel.app
 
 branding:
-  title: Iliauni Programming Club
-  label: v.0.1
+  title: IPC
+  label: v0.0.2
 
 meta:
   title: ""
