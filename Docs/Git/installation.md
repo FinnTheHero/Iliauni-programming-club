@@ -1,9 +1,12 @@
 ---
 label: "Installation"
-description: "Installing git"
+description: "Installing Git"
+authors:
+    - name: Aleksandre Nozadze
+      email: aleksandre.nozadze.1@iliauni.edu.ge
 icon: download
 order: 99
-category: git
+category: Git
 date: 2024-2-7
 ---
 

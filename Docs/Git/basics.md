@@ -1,9 +1,12 @@
 ---
 label: "Getting started"
 description: "Everything about Git."
+authors:
+    - name: Aleksandre Nozadze
+      email: aleksandre.nozadze.1@iliauni.edu.ge
 icon: terminal
 order: 98
-category: git
+category: Git
 date: 2024-2-7
 ---
 

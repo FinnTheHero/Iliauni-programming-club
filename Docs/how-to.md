@@ -1,6 +1,9 @@
 ---
 label: "How to"
 description: "Everything about how to use this website."
+authors:
+    - name: Aleksandre Nozadze
+      email: aleksandre.nozadze.1@iliauni.edu.ge
 icon: note
 order: 100
 category: How-to
@@ -30,6 +33,9 @@ Following example is from this page.
 ---
 label: "How to"
 description: "Everything about how to use this website."
+authors:
+    - name: Aleksandre Nozadze
+      email: aleksandre.nozadze.1@iliauni.edu.ge
 icon: note
 order: 100
 category: How-to
