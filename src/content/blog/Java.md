@@ -3,6 +3,7 @@ title: "Java"
 description: "Fibonacci numbers in Java"
 pubDate: "Feb 2 2024"
 updatedDate: "Feb 3 2024"
+author: FinnTheHero
 ---
 
 Below is a simple Java program to calculate Fibonacci numbers using both iterative and recursive approaches:

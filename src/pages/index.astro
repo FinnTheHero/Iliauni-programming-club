@@ -11,48 +11,48 @@ const postJoin = (await getCollection("blog")).find((post) => post.data.title ==
 ---
 
 <MainLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <div class="py-6"
+	<div class="py-6"
 	style="height: auto;"
-  >
-    <div class="text-4xl max-w-lg font-medium py-16">
-      <h1
-        class="inline-block bg-clip-text custom-title"
-        >
-        {SITE_TITLE} - {SITE_DESCRIPTION}
-      </h1>
-    </div>
-    <h2 class="text-3xl font-bold mb-4">Important Posts</h2>
-    <ul class="sm:w-[max-content]">
-      {postAbout && 
-        <PostCard 
-          title={postAbout.data.title}
-          desc={postAbout.data.description}
-          pubDate={postAbout.data.updatedDate || postAbout.data.pubDate}
-          href={postAbout.slug}
-        />
-      }
+	>
+		<div class="text-4xl max-w-lg font-medium py-16">
+			<h1
+				class="inline-block bg-clip-text custom-title"
+				>
+				{SITE_TITLE} - {SITE_DESCRIPTION}
+			</h1>
+		</div>
+		<h2 class="text-3xl font-bold mb-4">Important Posts</h2>
+		<ul class="sm:w-[max-content]">
+			{postAbout && 
+				<PostCard 
+					title={postAbout.data.title}
+					desc={postAbout.data.description}
+					pubDate={postAbout.data.updatedDate || postAbout.data.pubDate}
+					href={postAbout.slug}
+				/>
+			}
 
-      {postJoin && 
-        <PostCard 
-          title={postJoin.data.title}
-          desc={postJoin.data.description}
-          pubDate={postJoin.data.updatedDate || postJoin.data.pubDate}
-          href={postJoin.slug}
-        />
-      }
-      
-      {postFaq && 
-        <PostCard 
-          title={postFaq.data.title}
-          desc={postFaq.data.description}
-          pubDate={postFaq.data.updatedDate || postFaq.data.pubDate}
-          href={postFaq.slug}
-        />
-      }
-    </ul>
-  </div>
-  <a href="/blog">
-    <h3 class="text-xl my-8 custom-link">
+			{postJoin && 
+				<PostCard 
+					title={postJoin.data.title}
+					desc={postJoin.data.description}
+					pubDate={postJoin.data.updatedDate || postJoin.data.pubDate}
+					href={postJoin.slug}
+				/>
+			}
+			
+			{postFaq && 
+				<PostCard 
+					title={postFaq.data.title}
+					desc={postFaq.data.description}
+					pubDate={postFaq.data.updatedDate || postFaq.data.pubDate}
+					href={postFaq.slug}
+				/>
+			}
+		</ul>
+	</div>
+	<a href="/blog">
+		<h3 class="text-xl my-8 custom-link">
 		[Other posts]
 		<svg
 			width="6"
@@ -69,6 +69,6 @@ const postJoin = (await getCollection("blog")).find((post) => post.data.title ==
 			stroke-linecap="round"
 			stroke-linejoin="round"></path>
 		</svg>
-    </h3>
-  </a>
+		</h3>
+	</a>
 </MainLayout>

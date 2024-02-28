@@ -1,63 +1,77 @@
 body {
-  font-family: "Courier Prime", sans-serif;
-  overflow-y: scroll;
-  font-weight: 400;
+	font-family: "Courier Prime", sans-serif;
+	overflow-y: scroll;
+	font-weight: 400;
 
-  /*Background color*/
-  background-color: #11111b;
-  /*Base text color*/
-  color: #94e2d5;
+	/*Background color*/
+	background-color: #11111b;
+	/*Base text color*/
+	color: #94e2d5;
 }
 
 .custom-main {
-  color: #94e2d5;
+	color: #94e2d5;
 }
 
 .custom-background {
-  background-color: #11111b;
+	background-color: #11111b;
 }
 
 .custom-link {
-  color: #fab387;
+	color: #fab387;
 }
 
 .custom-title {
-  color: #cdd6f4;
+	color: #cdd6f4;
 }
 
 .custom-subtitle {
-  color: #7f849c;
+	color: #7f849c;
 }
 
 .custom-content {
-  color: #89dceb;
+	color: #89dceb;
+}
+
+.blog-author {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	color: #94e2d5;
+	text-decoration: none;
+}
+
+.blog-author:hover {
+	color: #fab387;
+	text-decoration: underline;
 }
 
 /* Custom scrollbar for webkit browsers */
 /* Vertical scrollbar */
 ::-webkit-scrollbar {
-  width: 5px; /* Width of the scrollbar for vertical scrolling */
-  height: 5px; /* Height of the scrollbar for horizontal scrolling */
+	width: 5px; /* Width of the scrollbar for vertical scrolling */
+	height: 5px; /* Height of the scrollbar for horizontal scrolling */
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; /* Track color */
+	background: transparent; /* Track color */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #181825; /* Thumb color */
-  border-radius: 5px; /* Round corners for the thumb */
+	background: #181825; /* Thumb color */
+	border-radius: 5px; /* Round corners for the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #181825; /* Thumb color on hover */
+	background: #181825; /* Thumb color on hover */
 }
 
 /* Horizontal scrollbar */
 ::-webkit-scrollbar-thumb:horizontal {
-  background: #181825; /* Thumb color for horizontal scrolling */
+	background: #181825; /* Thumb color for horizontal scrolling */
 }
 
 ::-webkit-scrollbar-thumb:horizontal:hover {
-  background: #181825; /* Thumb color on hover for horizontal scrolling */
+	background: #181825; /* Thumb color on hover for horizontal scrolling */
 }

@@ -3,6 +3,7 @@ title: "About IPC"
 description: "Iliauni Programming Club."
 pubDate: "Feb 2 2024"
 updatedDate: "Feb 3 2024"
+author: FinnTheHero
 ---
 
 ## Iliauni Programming Club

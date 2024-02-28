@@ -6,61 +6,100 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
+
+
+const apiUrl = "https://api.github.com/users/";
+const searchUrl = apiUrl + author;
+
+const response = await fetch(searchUrl);
+const userData = await response.json();
+
+let authorName = userData.name;
+let authorBlog = userData.blog;
+let authorAvatar = userData.avatar_url;
+
+const authorUrl = "https://github.com/" + author;
+
+if (response.status !== 200) {
+    console.log("Error status: " + response.status);
+    console.log("Error message:\n");
+    console.log(userData);
+
+    authorName = author;
+    authorAvatar = "/favicon-dark-v3.png";
+}
+
+if (authorBlog === ""){
+    authorBlog = authorUrl;
+}
 ---
 
 <MainLayout title={title} description={description}>
-  <section class="max-w-3xl mx-auto my-8">
-    {
-      heroImage && (
-        <div class="border border-zinc-800">
-          <img src={heroImage} alt={title} />
-        </div>
-      )
-    }
-    <div>
-      <div class="py-6 border-b border-zinc-800">
-        <h1 class="text-center text-4xl font-semibold" transition:name={title}>
-          {title}
-        </h1>
-        <div class="text-sm text-center custom-subtitle">
-          <FormattedDate date={pubDate} />
-          {
-            updatedDate && (
-              <>
-                <span>&roarr;</span>
-                <div class="custom-main inline-block">
-                  <FormattedDate date={updatedDate} />
+    <section class="max-w-3xl mx-auto my-8">
+        {
+        heroImage && (
+            <div class="border border-zinc-800">
+                <img src={heroImage} alt={title} />
+            </div>
+        )
+        }
+        <div>
+            <div class="py-6 border-b border-zinc-800">
+                <p class="text-center text-4xl font-semibold" transition:name={title}>
+                    {title}
+                </p>
+                <div class="text-sm text-center custom-subtitle">
+                    <FormattedDate date={pubDate} />
+                    {
+                        updatedDate && (
+                        <>
+                            <span>&roarr;</span>
+                            <div class="custom-main inline-block">
+                            <FormattedDate date={updatedDate} />
+                            </div>
+                        </>
+                        )
+                    }
                 </div>
-              </>
-            )
-          }
+                <br />
+                <div>
+                    <a href={authorBlog} class="blog-author">
+                        <img
+                            src={authorAvatar}
+                            alt={authorName}
+                            class="rounded-full w-12 h-12 mr-3"
+                        />
+                        <p class="text-center text-m" transition:name={authorName}>
+                            By {authorName}
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <article class="prose prose-invert py-8 mx-auto">
+                <slot />
+            </article>
         </div>
-      </div>
-      <article class="prose prose-invert py-8 mx-auto">
-        <slot />
-      </article>
-    </div>
-    <a href="/blog">
-      <h3 class="text-xl my-8 custom-link flex flex-column flex-wrap justify-center items-center">
-        <svg
-          width="6"
-          height="10"
-          viewBox="0 0 6 10"
-          fill="none"
-          class="inline-block sm:mr-3 mr-5"
-          xmlns="http://www.w3.org/2000/svg"
-          transform="rotate(180)"
-        >
-          <path
-          d="M1 9L5 5L1 1"
-          stroke="#fab387"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        </svg>
-        [Go Back]
-      </h3>
-    </a>
-  </section>
+        <a href="/blog">
+            <h3 class="text-xl my-8 custom-link flex flex-column flex-wrap justify-center items-center">
+                <svg
+                    width="6"
+                    height="10"
+                    viewBox="0 0 6 10"
+                    fill="none"
+                    class="inline-block sm:mr-3 mr-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    transform="rotate(180)"
+                    >
+                    <path
+                    d="M1 9L5 5L1 1"
+                    stroke="#fab387"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                </svg>
+                [Go Back]
+            </h3>
+        </a>
+    </section>
 </MainLayout>

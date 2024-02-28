@@ -2,6 +2,7 @@
 title: "Join us"
 description: "Everything you need to know before Joining."
 pubDate: "Feb 3 2024"
+author: FinnTheHero
 ---
 
 ## Join Us

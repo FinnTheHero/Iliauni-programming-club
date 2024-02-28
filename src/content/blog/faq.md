@@ -2,6 +2,7 @@
 title: "FAQ"
 description: "Frequently asked questions"
 pubDate: "Feb 03 2024"
+author: FinnTheHero
 ---
 
 ### Is this club for you?
