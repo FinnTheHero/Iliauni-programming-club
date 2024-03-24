@@ -53,7 +53,7 @@ strings <file>
 ---
 
 # CheatSheet
-
+> GDB related
 ## Start:
 - `gdb`: Start gdb
 - `gdb <file>`: Start gdb with a specific file
@@ -142,6 +142,8 @@ strings <file>
 - `undisplay`: Turn off display mode
 - `help`: Get information about gdb
 
+---
+> Assembly related
 ## Jump instructions
 - `JMP`: Unconditional jump, doesnt need to check anything.
 - `JE`: Jump if equal.
