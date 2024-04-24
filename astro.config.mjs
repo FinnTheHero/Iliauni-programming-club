@@ -5,6 +5,8 @@ import sitemap from "@astrojs/sitemap";
 
 import mdx from "@astrojs/mdx";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE_URL,
@@ -14,6 +16,7 @@ export default defineConfig({
     }),
     sitemap(),
     mdx(),
+    react(),
   ],
   markdown: {
     shikiConfig: {
