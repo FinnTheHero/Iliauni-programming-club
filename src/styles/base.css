@@ -47,6 +47,10 @@ body {
 	text-decoration: underline;
 }
 
+.search-border {
+	border-color:#fab387;
+}
+
 /* Custom scrollbar for webkit browsers */
 /* Vertical scrollbar */
 ::-webkit-scrollbar {
