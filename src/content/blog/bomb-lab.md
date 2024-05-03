@@ -2,6 +2,7 @@
 title: "Bomb Lab"
 description: "CheatSheet and guide for bomb lab"
 pubDate: "Mar 24 2024"
+updatedDate: "May 3 2024"
 author: FinnTheHero
 ---
 
