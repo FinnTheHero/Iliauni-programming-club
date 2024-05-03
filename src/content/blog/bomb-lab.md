@@ -20,6 +20,9 @@ The "bomb lab" is a common assignment or project in computer systems or computer
 ## Getting Started
 ### Save Answers
 You might as well make some file, call it solutions or what i prefer: `defuse_kit.txt`.
+```bash
+touch defuse_kit.txt
+```
 You will use this file to save answers for 6 phases you go thru, instead of typing answers on each test of bomb you will run program with this file `./bomb answers.txt` this will automatically take answers in following order: first line for first phase, second line for second phase and so on.
 When you find answer, you place it inside this file.
 
