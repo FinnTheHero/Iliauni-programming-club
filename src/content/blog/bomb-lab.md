@@ -78,6 +78,30 @@ you can now use text editor in terminal (Vim, Vi, Nano, NeoVim . . .) to see the
 7. `Secret Phase`, Look closely at the assembly dump. Dr. Evil must've left some hidden things there... or so they say...
 
 ---
+# Common issues
+1. `permision denied`: This means that your executable doesnt have permission to execute. To give it permissions run:
+    ```bash
+    chmod +x bomb
+    ```
+
+## WSL related issues
+1. GDB doesnt come with wsl on default and you need to install it on your own. However, standard GDB might have problems when setting up Breakpoints. If you encounter this you might want to delete GDB, download source code for GDB and compile it.
+Easier way is to add ubuntu support teams version of GDB (remove existing GDB first):
+    ```bash
+    sudo add-apt-repository ppa:ubuntu-support-team/gdb
+    sudo apt update
+    ```
+    if GDB is not isntalled after this just run:
+    ```bash
+    sudo apt install gdb
+    ```
+
+2. Not being able to install GDB. You might wanna update your system first:
+    ```bash
+    sudo apt update
+    sudo apt upgrade
+    ```
+---
 
 # CheatSheet
 > GDB related
