@@ -7,6 +7,9 @@ This repository contains the code for our club's website, featuring information 
 
 ![Iliauni Programming Club](public/favicon-dark-v3.png)
 
+<p style="font-size: 20px;">If you are a Iliauni Student then <a href="https://forms.gle/VFYGsTiG3tUJ3fYP6" target="_blank" style="text-decoration: none;" class="custom-link"><strong>Join Us</strong></a>!</p>
+
+
 # License
 
 This project is licensed under the [MIT License](LICENSE).
