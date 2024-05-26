@@ -2,12 +2,15 @@
 title: "Join us"
 description: "Everything you need to know before Joining."
 pubDate: "Feb 3 2024"
+updatedDate: "May 26 2024"
 author: FinnTheHero
 ---
 
 ## Join Us
 
 Are you ready to dive into the world of technology and programming? Join the Iliauni Programming Club and become part of a vibrant community of tech enthusiasts!
+
+<a href="https://forms.gle/VFYGsTiG3tUJ3fYP6" target="_blank" style="text-decoration: none;" class="custom-link"><strong><h2>Sign Up Form</h2></strong></a>
 
 ### Who can join?
 
