@@ -2,7 +2,7 @@
 title: "Join us"
 description: "Everything you need to know before Joining."
 pubDate: "Feb 3 2024"
-updatedDate: "May 26 2024"
+updatedDate: "May 27 2024"
 author: FinnTheHero
 ---
 
@@ -10,7 +10,7 @@ author: FinnTheHero
 
 Are you ready to dive into the world of technology and programming? Join the Iliauni Programming Club and become part of a vibrant community of tech enthusiasts!
 
-<a href="https://forms.gle/VFYGsTiG3tUJ3fYP6" target="_blank" style="text-decoration: none;" class="custom-link"><strong><h2>Sign Up Form</h2></strong></a>
+<strong><h2><a href="https://forms.gle/VFYGsTiG3tUJ3fYP6" target="_blank" style="text-decoration: none;" class="custom-link">Sign Up</a> | <a href="https://discord.gg/7tqnd3NcZn" target="_blank" style="text-decoration: none;" class="custom-link">Join our Discord Server</a></h2></strong>
 
 ### Who can join?
 
